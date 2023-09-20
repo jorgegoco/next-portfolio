@@ -71,7 +71,7 @@ export const projectsData = [
   {
     title: "Ticket Admin",
     description:
-      "Web App that helps a company to manage tickets among their employees. It is built with a MERN stack, which stands for MongoDB, Express, React, and Node.js. (You can play around with the app with my admin user: username: jorge password: test)",
+      "Web App that helps a company to manage tickets among their employees (You can play around with the app with my admin user: username: jorge password: test)",
     tags: ["MongoDB", "Express", "React", "Node"],
     imageUrl: ticketImg,
   },
