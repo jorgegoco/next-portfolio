@@ -5,9 +5,10 @@ import { motion } from 'framer-motion'
 import { useSectionInView } from '@/lib/hooks'
 import SubmitBtn from './submit-btn'
 import { sendEmail } from '@/actions/sendEmail'
+import toast from 'react-hot-toast'
 
 export default function Contact() {
-  const { ref } = useSectionInView("Contact");
+  const { ref } = useSectionInView("Contact")
 
   return (
     <motion.section
@@ -31,7 +32,7 @@ export default function Contact() {
 
       <p className="text-gray-700 -mt-6 dark:text-white/80">
         Please contact me directly at&nbsp;
-        <a className="underline" href="jorgegoco70@gmail.com">
+        <a className="underline" href="mailto:jorgegoco70@gmail.com">
           jorgegoco70@gmail.com
         </a>&nbsp;
         or through this form.
@@ -40,7 +41,14 @@ export default function Contact() {
       <form
         className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
-          await sendEmail(formData)
+          const { data, error } = await sendEmail(formData)
+
+          if (error) {
+            toast.error(error)
+            return
+          }
+
+          toast.success("Email sent successfully!")
         }}
       >
         <input
