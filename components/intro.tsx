@@ -56,7 +56,7 @@ export default function Intro() {
       >
         <span className="font-bold">Hello, I&apos;m Jorge.</span> I&apos;m a&nbsp;
         <span className="font-bold">Full-stack developer</span> with&nbsp;
-        <span className="font-bold">2 years</span> of experience. I enjoy building&nbsp;
+        <span className="font-bold">3 years</span> of experience. I enjoy building&nbsp;
         <span className="italic">sites &amp; apps</span>. My focus is&nbsp;
         <span className="underline">React (Next.js)</span> &&nbsp;
         <span className="underline">Ruby on Rails</span>
