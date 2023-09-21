@@ -35,26 +35,34 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Data Science",
-    location: "Santander, Spain",
+    title: "Industrial Electronics and Automation Engineering",
+    location: "Vigo, Spain",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "I graduated after 4 years of studying. I immediately found a job as a Production Manager.",
     icon: React.createElement(LuGraduationCap),
-    date: "2017 - 2021",
+    date: "1998 - 2002",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Santander, Spain",
+    title: "Production Manager",
+    location: "Ourense, Spain",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "With nearly 15 years of experience in the wood manufacturing industry, I have held various roles, most notably as a production manager.",
     icon: React.createElement(CgWorkAlt),
-    date: "2021 - 2022",
+    date: "2002 - 2017",
+  },
+  {
+    title: "Microverse",
+    location: "Remote",
+    description:
+      "I graduated after 11 months of studying. I inmediately began mentoring junior web developers, providing technical support through code reviews.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2022 - 2023",
   },
   {
     title: "Full-Stack Developer",
     location: "Santander, Spain",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, and Ruby on Rails. I'm open to full-time opportunities.",
     icon: React.createElement(FaReact),
     date: "2022 - present",
   },
@@ -67,6 +75,7 @@ export const projectsData = [
       "Web App that allows users to handle little shops with few resources. This little project provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
     tags: ["Vite", "React", "TypeScript"],
     imageUrl: littleShopImg,
+    link: "https://jorgegoco.github.io/littleShop/",
   },
   {
     title: "Ticket Admin",
@@ -74,6 +83,7 @@ export const projectsData = [
       "Web App that helps a company to manage tickets among their employees (You can play around with the app with my admin user: username: jorge password: test)",
     tags: ["MongoDB", "Express", "React", "Node"],
     imageUrl: ticketImg,
+    link: "https://ticketadmin.onrender.com/",
   },
   {
     title: "Sell It",
@@ -81,6 +91,7 @@ export const projectsData = [
       "Web App that allows users to sell or buy almost anything online. You can watch, add, or manage products, and browse categories created by admins.",
     tags: ["Ruby on Rails", "PostgreSQL", "AWS S3"],
     imageUrl: sellitImg,
+    link: "https://sellit-rails.fly.dev/",
   },
 ] as const;
 
@@ -97,10 +108,10 @@ export const skillsData = [
   "Rails",
   "Git",
   "Tailwind",
-  "Prisma",
+  "RSpec",
   "MongoDB",
   "Redux",
-  "Apollo",
+  "Jest",
   "Express",
   "PostgreSQL",
   "Framer Motion",
