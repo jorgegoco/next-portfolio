@@ -54,7 +54,7 @@ export const experiencesData = [
     title: "Microverse",
     location: "Remote",
     description:
-      "I graduated after 11 months of studying. I inmediately began mentoring junior web developers, providing technical support through code reviews.",
+      "I graduated after 11 months of studying. I immediately began mentoring junior web developers, providing technical support through code reviews.",
     icon: React.createElement(LuGraduationCap),
     date: "2022 - 2023",
   },
@@ -70,7 +70,7 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "litle Shop",
+    title: "little Shop",
     description:
       "Web App that allows users to handle little shops with few resources. This little project provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
     tags: ["Vite", "React", "TypeScript"],
