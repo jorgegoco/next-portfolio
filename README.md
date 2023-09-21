@@ -51,7 +51,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://next-portfolio-one-jade.vercel.app/)
+- [Live Demo Link](https://jorgegoco.vercel.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
