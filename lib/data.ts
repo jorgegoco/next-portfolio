@@ -1,10 +1,10 @@
-import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
-import littleShopImg from "@/public/littleShop.png";
-import ticketImg from "@/public/ticket.png";
-import sellitImg from "@/public/sellit.png";
+import React from "react"
+import { CgWorkAlt } from "react-icons/cg"
+import { FaReact } from "react-icons/fa"
+import { LuGraduationCap } from "react-icons/lu"
+import littleShopImg from "@/public/littleShop.png"
+import ticketImg from "@/public/ticket.png"
+import sellitImg from "@/public/sellit.png"
 
 export const links = [
   {
@@ -31,7 +31,7 @@ export const links = [
     name: "Contact",
     hash: "#contact",
   },
-] as const;
+] as const
 
 export const experiencesData = [
   {
@@ -66,7 +66,7 @@ export const experiencesData = [
     icon: React.createElement(FaReact),
     date: "2022 - present",
   },
-] as const;
+] as const
 
 export const projectsData = [
   {
@@ -93,7 +93,7 @@ export const projectsData = [
     imageUrl: sellitImg,
     link: "https://sellit-rails.fly.dev/",
   },
-] as const;
+] as const
 
 export const skillsData = [
   "HTML5",
@@ -115,4 +115,5 @@ export const skillsData = [
   "Express",
   "PostgreSQL",
   "Framer Motion",
-] as const;
+  "SQL Server",
+] as const

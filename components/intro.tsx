@@ -1,13 +1,13 @@
-'use client'
+"use client"
 
-import Image from 'next/image'
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-import { BsArrowRight, BsLinkedin } from 'react-icons/bs'
-import { FaGithubSquare } from 'react-icons/fa'
-import { HiDownload } from 'react-icons/hi'
-import { useSectionInView } from '@/lib/hooks'
-import { useActiveSectionContext } from '@/context/active-section-context'
+import Image from "next/image"
+import { motion } from "framer-motion"
+import Link from "next/link"
+import { BsArrowRight, BsLinkedin } from "react-icons/bs"
+import { FaGithubSquare } from "react-icons/fa"
+import { HiDownload } from "react-icons/hi"
+import { useSectionInView } from "@/lib/hooks"
+import { useActiveSectionContext } from "@/context/active-section-context"
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5)
@@ -36,7 +36,8 @@ export default function Intro() {
               height="192"
               quality="95"
               priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl" />
+              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+            />
           </motion.div>
 
           <motion.span
@@ -60,12 +61,14 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I&apos;m Jorge.</span> I&apos;m a&nbsp;
+        <span className="font-bold">Hello, I&apos;m Jorge.</span> I&apos;m
+        a&nbsp;
         <span className="font-bold">Full-stack developer</span> with&nbsp;
-        <span className="font-bold">2 years</span> of experience. I enjoy building&nbsp;
+        <span className="font-bold">3 years</span> of experience. I enjoy
+        building&nbsp;
         <span className="italic">sites &amp; apps</span>. My focus is&nbsp;
         <span className="underline">React (Next.js)</span> &&nbsp;
-        <span className="underline">Ruby on Rails</span>
+        <span className="underline">Node.js</span>
       </motion.h1>
 
       <motion.div
