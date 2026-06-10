@@ -11,8 +11,9 @@ import ThemeContextProvider from '@/context/theme-context'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Jorge | Personal Portfolio',
-  description: 'Jorge Full-stack Developer',
+  title: 'Jorge González | AI Agent & Automation Developer',
+  description:
+    'I design and ship production AI agents, RAG systems, and workflow automation in Python/FastAPI and Next.js — integrating Claude, OpenAI, LangChain, and MCP. Available for contract and full-time work.',
 }
 
 export default function RootLayout({
