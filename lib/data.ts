@@ -35,85 +35,147 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Industrial Electronics and Automation Engineering",
-    location: "Vigo, Spain",
+    title: "Electronics & Automation Engineering",
+    location: "Universidad de Vigo",
     description:
-      "I graduated after 4 years of studying. I immediately found a job as a Production Manager.",
+      "Studied Industrial Electronics and Automation Engineering — the technical foundation I later carried into operations and, today, into AI and automation work.",
     icon: React.createElement(LuGraduationCap),
     date: "1998 - 2002",
   },
   {
-    title: "Production Manager",
+    title: "Production Manager — MAI",
     location: "Ourense, Spain",
     description:
-      "With nearly 15 years of experience in the wood manufacturing industry, I have held various roles, most notably as a production manager.",
+      "Ran operations and a 20+ person team. Applied Six Sigma to optimize workflows and quality — the process discipline I now bring to automation work.",
     icon: React.createElement(CgWorkAlt),
     date: "2002 - 2017",
   },
   {
-    title: "Microverse",
+    title: "Technical Mentor — Microverse",
     location: "Remote",
     description:
-      "I graduated after 11 months of studying. I immediately began mentoring junior web developers, providing technical support through code reviews.",
+      "Mentor junior developers through code reviews and architecture guidance, focused on code quality and shipping complete full-stack projects.",
     icon: React.createElement(LuGraduationCap),
-    date: "2022 - 2023",
+    date: "2022 - Present",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Santander, Spain",
+    title: "AI & Automation Developer — Freelance",
+    location: "Remote",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, and Ruby on Rails. I'm open to full-time opportunities.",
+      "Design, build, and deploy production AI systems: multi-agent workflows, RAG pipelines, MCP integrations, and document-extraction automation using Claude, OpenAI, LangChain, and FastAPI — shipped as containerized services on VPS infrastructure. 30+ certifications in ML, Deep Learning, NLP, and Computer Vision from Stanford, MIT, and DeepLearning.AI.",
     icon: React.createElement(FaReact),
-    date: "2022 - present",
+    date: "2022 - Present",
+  },
+  {
+    title: "Full-Stack Developer — The Ticket Merchant",
+    location: "Remote",
+    description:
+      "Built an internal web application (Next.js, Node.js, SQL Server) with an API/microservices architecture. Ran code reviews and solved complex integration problems with a multidisciplinary team.",
+    icon: React.createElement(FaReact),
+    date: "2023 - 2024",
   },
 ] as const
 
 export const projectsData = [
   {
-    title: "little Shop",
+    title: "Mi Agentuca — SME AI Agents",
     description:
-      "Web App that allows users to handle little shops with few resources. This little project provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
-    tags: ["Vite", "React", "TypeScript"],
+      "Production AI agents that automate back-office work: an accounting/admin assistant, a purchasing agent that compares supplier quotes, and an explainer bot — including document extraction via OCR and vision-language models. Concept to deployed service.",
+    tags: ["Python", "FastAPI", "Claude", "Docker", "OCR/VLM"],
     imageUrl: littleShopImg,
-    link: "https://jorgegoco.github.io/littleShop/",
+    link: "https://miagentuca.es",
   },
   {
-    title: "Ticket Admin",
+    title: "Research Agent (Multi-Agent System)",
     description:
-      "Web App that helps a company to manage tickets among their employees (You can play around with the app with my admin user: username: jorge password: test)",
-    tags: ["MongoDB", "Express", "React", "Node"],
+      "A team of cooperating AI agents — planner → researcher → writer → editor — that autonomously produces full academic reports from arXiv and live web search, with real-time progress tracking.",
+    tags: ["Python", "FastAPI", "LangChain", "PostgreSQL"],
     imageUrl: ticketImg,
-    link: "https://ticketadmin.onrender.com/",
+    link: "https://github.com/jorgegoco/research-agentic-ai",
   },
   {
-    title: "Sell It",
+    title: "MCP Chatbot Client",
     description:
-      "Web App that allows users to sell or buy almost anything online. You can watch, add, or manage products, and browse categories created by admins.",
-    tags: ["Ruby on Rails", "PostgreSQL", "AWS S3"],
+      "A production Model Context Protocol client that connects to unlimited MCP servers at once and discovers their tools dynamically — solving the M×N integration problem with a clean M+N pattern.",
+    tags: ["Python", "MCP", "Claude API"],
     imageUrl: sellitImg,
-    link: "https://sellit-rails.fly.dev/",
+    link: "https://github.com/jorgegoco/mcp-chatbot-client",
+  },
+  {
+    title: "Job Offers Generator",
+    description:
+      "A web app that reads a job posting and generates a tailored CV and cover letter with Claude — automatic language detection and PDF export built in.",
+    tags: ["Python", "FastAPI", "Claude", "WeasyPrint"],
+    imageUrl: littleShopImg,
+    link: "https://github.com/jorgegoco/job_offers",
+  },
+  {
+    title: "UI Gen — Components from Natural Language",
+    description:
+      "Describe a UI in plain language and get a working React component back, with live preview, hot reload, and user accounts.",
+    tags: ["Next.js 15", "TypeScript", "Prisma", "Vercel AI SDK"],
+    imageUrl: ticketImg,
+    link: "https://github.com/jorgegoco/uigen",
+  },
+  {
+    title: "Audio Diary (Privacy-First)",
+    description:
+      "A voice journaling app that transcribes speech locally with Whisper — no audio ever leaves the device.",
+    tags: ["Next.js 15", "FastAPI", "Whisper"],
+    imageUrl: sellitImg,
+    link: "https://github.com/jorgegoco/audio-diary-app",
   },
 ] as const
 
 export const skillsData = [
-  "HTML5",
-  "CSS3",
-  "JavaScript",
-  "TypeScript",
-  "Ruby",
+  // AI / LLMs & Agents
+  "Anthropic Claude API",
+  "OpenAI API",
+  "Prompt Engineering",
+  "AI Agent Development",
+  "LangChain",
+  "RAG",
+  "Vector Databases",
+  "Model Context Protocol (MCP)",
+  "Hugging Face",
+  "Ollama (local inference)",
+  "OCR & Vision-Language Models",
+  // Backend & Integration
   "Python",
+  "FastAPI",
+  "Node.js",
+  "Express",
+  "REST API design",
+  "Microservices",
+  "PostgreSQL",
+  "MongoDB",
+  "Redis",
+  "SQL Server",
+  // Frontend & Full-Stack
+  "TypeScript",
+  "JavaScript",
   "React",
   "Next.js",
-  "Node.js",
-  "Rails",
-  "Git",
-  "Tailwind",
-  "RSpec",
-  "MongoDB",
+  "Ruby on Rails",
+  "Tailwind CSS",
   "Redux",
-  "Jest",
-  "Express",
-  "PostgreSQL",
-  "Framer Motion",
-  "SQL Server",
+  // DevOps & Deployment
+  "Docker",
+  "VPS deployment (Contabo / Easypanel)",
+  "AWS (S3, Lambda)",
+  "Fly.io",
+  "GitHub Actions",
+  "CI/CD",
+  "Linux",
+  // Foundations
+  "Machine Learning",
+  "Deep Learning",
+  "NLP",
+  "Computer Vision",
+  "TensorFlow",
+  "PyTorch",
+  "Keras",
+  "Git",
+  "TDD (pytest, Jest)",
+  "Agile/Scrum",
 ] as const
