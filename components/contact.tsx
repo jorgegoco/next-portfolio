@@ -28,14 +28,16 @@ export default function Contact() {
         once: true,
       }}
     >
-      <SectionHeading>Contact me</SectionHeading>
+      <SectionHeading>Let&apos;s build something.</SectionHeading>
 
       <p className="text-gray-700 -mt-6 dark:text-white/80">
-        Please contact me directly at&nbsp;
+        Available for AI/automation contract work and open to full-time roles.
+        The fastest way to reach me is email at&nbsp;
         <a className="underline" href="mailto:jorgegoco70@gmail.com">
           jorgegoco70@gmail.com
         </a>&nbsp;
-        or through this form.
+        — tell me what you&apos;re trying to automate or build, and I&apos;ll
+        tell you honestly whether I&apos;m the right fit.
       </p>
 
       <form

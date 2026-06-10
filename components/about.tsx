@@ -18,29 +18,39 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        After spending most of my life in the traditional industry, I decided to pursue my
-        passion for programming. I enrolled in at&nbsp;<span className="font-medium">Microverse</span>: a remote school for&nbsp;
-        <span className="font-medium">full-stack web development</span>.&nbsp;
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
-        is&nbsp;
-        <span className="font-medium">
-          React, Next.js, Node.js, and Ruby on Rails
+        <span className="font-medium">I&apos;m an engineer who builds AI that ships.</span>{" "}
+        I spent the first part of my career in industrial engineering and
+        production management — running operations, applying&nbsp;
+        <span className="font-medium">Six Sigma</span>, cutting waste, and
+        obsessing over processes. That taught me something most developers never
+        learn the hard way:&nbsp;
+        <span className="italic">
+          automation only matters when it solves a real bottleneck in how a
+          business actually runs
         </span>
-        , and I am also familiar with TypeScript and Python. I am always looking to
-        learn new technologies. I am currently looking for a&nbsp;
-        <span className="font-medium">full-time position</span> as a software
-        developer.
+        .
+      </p>
+
+      <p className="mb-3">
+        I now build that automation directly. My focus is production-grade&nbsp;
+        <span className="font-medium">AI agents and workflow systems</span> —
+        designing them, prompting them well, wiring them to APIs and databases,
+        containerizing them with Docker, and deploying them so they run reliably.
+        I work day-to-day with&nbsp;
+        <span className="font-medium">Claude and OpenAI</span>, LangChain, RAG
+        and vector databases, the&nbsp;
+        <span className="font-medium">Model Context Protocol (MCP)</span>, and
+        document extraction with OCR and vision-language models. On the frontend
+        and full-stack side I work in&nbsp;
+        <span className="font-medium">Next.js, React, Node.js, and Ruby on Rails</span>.
       </p>
 
       <p>
-        <span className="italic">When I&apos;m not coding</span>, I enjoy playing
-        video games, reading books, and conversing with my beloved ones. I also enjoy&nbsp;
-        <span className="font-medium">learning new things</span>. I am currently
-        learning about&nbsp;
-        <span className="font-medium">history and philosophy</span>. I&apos;m also
-        learning how to play the guitar.
+        What I bring that&apos;s harder to find: I combine current, hands-on
+        agentic-AI work with a deep, practical understanding of business
+        processes — and <span className="underline">I deliver</span>. I&apos;d
+        rather show you a deployed system than a slide. I&apos;m available for
+        contract projects and open to the right full-time role.
       </p>
     </motion.section>
   )
