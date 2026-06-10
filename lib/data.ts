@@ -78,12 +78,26 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Mi Agentuca — SME AI Agents",
+    title: "Document Intelligence Suite (ADE)",
     description:
-      "Production AI agents that automate back-office work: an accounting/admin assistant, a purchasing agent that compares supplier quotes, and an explainer bot — including document extraction via OCR and vision-language models. Concept to deployed service.",
-    tags: ["Python", "FastAPI", "Claude", "Docker", "OCR/VLM"],
+      "A suite of four live, production-deployed document-AI services, each built on a 3-layer architecture (natural-language SOPs → Claude for decisions → deterministic Python for execution) for reliability. FastAPI + Docker on a VPS, with rate limiting and SSL.",
+    tags: [
+      "Python",
+      "FastAPI",
+      "Claude",
+      "LandingAI ADE",
+      "OpenAI Embeddings",
+      "ChromaDB",
+      "Docker",
+    ],
     imageUrl: littleShopImg,
-    link: "https://miagentuca.es",
+    link: "https://github.com/jorgegoco/miagentuca-demos",
+    liveLinks: [
+      { label: "ADE Parse", href: "https://ade-parse.miagentuca.es" },
+      { label: "ADE Pipeline", href: "https://ade-pipeline.miagentuca.es" },
+      { label: "ADE RAG", href: "https://ade-rag.miagentuca.es" },
+      { label: "ADE Chat", href: "https://ade-chat.miagentuca.es" },
+    ],
   },
   {
     title: "Research Agent (Multi-Agent System)",
@@ -125,6 +139,14 @@ export const projectsData = [
     imageUrl: sellitImg,
     link: "https://github.com/jorgegoco/audio-diary-app",
   },
+  {
+    title: "Cooking Copilot — Voice Agent (in progress)",
+    description:
+      "A voice-driven cooking assistant — talk to the agent while you cook and it drives the on-screen recipe (advancing steps, highlighting ingredients, starting timers) while the UI feeds context back to the agent. A hands-on exploration of real-time, bidirectional voice agents.",
+    tags: ["React 19", "TypeScript", "Vite", "Vocal Bridge SDK", "In progress"],
+    imageUrl: littleShopImg,
+    link: "https://github.com/jorgegoco/cooking_copilot",
+  },
 ] as const
 
 export const skillsData = [
@@ -137,6 +159,10 @@ export const skillsData = [
   "RAG",
   "Vector Databases",
   "Model Context Protocol (MCP)",
+  "Claude tool-use / agentic loops",
+  "LandingAI ADE (document extraction)",
+  "ChromaDB",
+  "Voice agents (real-time)",
   "Hugging Face",
   "Ollama (local inference)",
   "OCR & Vision-Language Models",
