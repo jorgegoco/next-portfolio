@@ -7,6 +7,8 @@ import ticketImg from "@/public/ticket.png"
 import sellitImg from "@/public/sellit.png"
 import adeParseImg from "@/public/projects/ade-parse.jpg"
 import adePipelineImg from "@/public/projects/ade-pipeline.jpg"
+import adeRagImg from "@/public/projects/ade-rag.jpg"
+import adeChatImg from "@/public/projects/ade-chat.jpg"
 
 export const links = [
   {
@@ -104,18 +106,20 @@ export const projectsData = [
     description:
       "Retrieval-augmented Q&A over a corpus of uploaded documents — answers grounded in source chunks with page citations.",
     tags: ["Python", "FastAPI", "Claude", "LandingAI ADE", "ChromaDB", "OpenAI Embeddings"],
-    imageUrl: ticketImg,
-    link: "https://github.com/jorgegoco/miagentuca-demos",
-    codeUrl: "https://github.com/jorgegoco/miagentuca-demos",
+    imageUrl: adeRagImg,
+    link: "https://github.com/jorgegoco/demo-ade-rag-front",
+    codeUrl: "https://github.com/jorgegoco/demo-ade-rag-front",
+    videoUrl: "/projects/ade-rag.mp4",
   },
   {
     title: "ADE Chat — Multi-Doc Chat",
     description:
       "Conversational interface over multiple documents simultaneously — cross-file reasoning with full citation support.",
     tags: ["Python", "FastAPI", "Claude", "LandingAI ADE", "ChromaDB"],
-    imageUrl: sellitImg,
-    link: "https://github.com/jorgegoco/miagentuca-demos",
-    codeUrl: "https://github.com/jorgegoco/miagentuca-demos",
+    imageUrl: adeChatImg,
+    link: "https://github.com/jorgegoco/demo-ade-chat-front",
+    codeUrl: "https://github.com/jorgegoco/demo-ade-chat-front",
+    videoUrl: "/projects/ade-chat.mp4",
   },
   {
     title: "Research Agent (Multi-Agent System)",
