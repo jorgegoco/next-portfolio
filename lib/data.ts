@@ -5,6 +5,8 @@ import { LuGraduationCap } from "react-icons/lu"
 import littleShopImg from "@/public/littleShop.png"
 import ticketImg from "@/public/ticket.png"
 import sellitImg from "@/public/sellit.png"
+import adeParseImg from "@/public/projects/ade-parse.jpg"
+import adePipelineImg from "@/public/projects/ade-pipeline.jpg"
 
 export const links = [
   {
@@ -78,26 +80,42 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Document Intelligence Suite (ADE)",
+    title: "ADE Parse — Document Parser & Extractor",
     description:
-      "A suite of four live, production-deployed document-AI services, each built on a 3-layer architecture (natural-language SOPs → Claude for decisions → deterministic Python for execution) for reliability. FastAPI + Docker on a VPS, with rate limiting and SSL.",
-    tags: [
-      "Python",
-      "FastAPI",
-      "Claude",
-      "LandingAI ADE",
-      "OpenAI Embeddings",
-      "ChromaDB",
-      "Docker",
-    ],
-    imageUrl: littleShopImg,
+      "Vision-first parsing of any PDF or image into structured markdown, plus schema-based field extraction with visual grounding (handles handwriting, stamps, broken tables).",
+    tags: ["Python", "FastAPI", "Claude", "LandingAI ADE", "React"],
+    imageUrl: adeParseImg,
+    link: "https://github.com/jorgegoco/demo-ade-parse-front",
+    codeUrl: "https://github.com/jorgegoco/demo-ade-parse-front",
+    videoUrl: "/projects/ade-parse.mp4",
+  },
+  {
+    title: "ADE Pipeline — Loan Application Processor",
+    description:
+      "End-to-end intake for lending/KYC — batch-classify financial docs (IDs, W-2s, pay stubs, bank/investment statements), extract type-specific fields, and cross-validate across all of them.",
+    tags: ["Python", "FastAPI", "Claude", "LandingAI ADE", "React"],
+    imageUrl: adePipelineImg,
+    link: "https://github.com/jorgegoco/demo-ade-pipeline-front",
+    codeUrl: "https://github.com/jorgegoco/demo-ade-pipeline-front",
+    videoUrl: "/projects/ade-pipeline.mp4",
+  },
+  {
+    title: "ADE RAG — Document Q&A",
+    description:
+      "Retrieval-augmented Q&A over a corpus of uploaded documents — answers grounded in source chunks with page citations.",
+    tags: ["Python", "FastAPI", "Claude", "LandingAI ADE", "ChromaDB", "OpenAI Embeddings"],
+    imageUrl: ticketImg,
     link: "https://github.com/jorgegoco/miagentuca-demos",
-    liveLinks: [
-      { label: "ADE Parse", href: "https://ade-parse.miagentuca.es" },
-      { label: "ADE Pipeline", href: "https://ade-pipeline.miagentuca.es" },
-      { label: "ADE RAG", href: "https://ade-rag.miagentuca.es" },
-      { label: "ADE Chat", href: "https://ade-chat.miagentuca.es" },
-    ],
+    codeUrl: "https://github.com/jorgegoco/miagentuca-demos",
+  },
+  {
+    title: "ADE Chat — Multi-Doc Chat",
+    description:
+      "Conversational interface over multiple documents simultaneously — cross-file reasoning with full citation support.",
+    tags: ["Python", "FastAPI", "Claude", "LandingAI ADE", "ChromaDB"],
+    imageUrl: sellitImg,
+    link: "https://github.com/jorgegoco/miagentuca-demos",
+    codeUrl: "https://github.com/jorgegoco/miagentuca-demos",
   },
   {
     title: "Research Agent (Multi-Agent System)",
