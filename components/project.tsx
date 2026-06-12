@@ -47,7 +47,6 @@ const TAG_COLORS: Record<string, string> = {
 const getTagColor = (tag: string) => TAG_COLORS[tag] ?? 'bg-slate-600'
 
 type ProjectProps = (typeof projectsData)[number] & {
-  liveLinks?: readonly { label: string; href: string }[]
   videoUrl?: string
   codeUrl?: string
 }
@@ -58,23 +57,34 @@ export default function Project({
   tags,
   imageUrl,
   link,
-  liveLinks,
   videoUrl,
   codeUrl,
 }: ProjectProps) {
   const [isPlaying, setIsPlaying] = useState(false)
   const [mounted, setMounted] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
+  const triggerRef = useRef<HTMLButtonElement>(null)
+  const closeRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => setMounted(true), [])
 
   useEffect(() => {
     if (!isPlaying) return
+    const trigger = triggerRef.current
     const handler = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setIsPlaying(false)
     }
     window.addEventListener('keydown', handler)
-    return () => window.removeEventListener('keydown', handler)
+    // Lock background scroll and move focus into the dialog
+    const prevOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    closeRef.current?.focus()
+    return () => {
+      window.removeEventListener('keydown', handler)
+      document.body.style.overflow = prevOverflow
+      // Restore focus to the play button that opened the dialog
+      trigger?.focus()
+    }
   }, [isPlaying])
 
   const { scrollYProgress } = useScroll({
@@ -88,43 +98,14 @@ export default function Project({
     <section className='bg-gray-100 max-w-[45rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:min-h-[20rem] hover:bg-gray-200 hover:shadow-lg transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20'>
       <div className='h-1 bg-gradient-to-r from-violet-500 via-sky-400 to-teal-400' />
       <div className='pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]'>
-        <h3 className='text-2xl font-semibold'>
-          {liveLinks ? (
-            <a
-              href={link}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='hover:underline'
-            >
-              {title}
-            </a>
-          ) : (
-            title
-          )}
-        </h3>
+        <h3 className='text-2xl font-semibold'>{title}</h3>
         <p className='mt-2 leading-relaxed text-gray-700 dark:text-white/70'>
           {description}
         </p>
-        {liveLinks && (
-          <ul className='flex flex-wrap mt-3 gap-x-4 gap-y-1 text-sm'>
-            {liveLinks.map((demo) => (
-              <li key={demo.href}>
-                <a
-                  href={demo.href}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='underline text-gray-700 hover:text-gray-950 dark:text-white/70 dark:hover:text-white'
-                >
-                  {demo.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        )}
         <ul className='flex flex-wrap mt-4 gap-2 sm:mt-auto'>
           {tags.map((tag, index) => (
             <li
-              className={`${getTagColor(tag)} px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:opacity-90`}
+              className={`${getTagColor(tag)} px-3 py-1 text-[0.7rem] font-medium uppercase tracking-wider text-white rounded-full`}
               key={index}
             >
               {tag}
@@ -145,10 +126,11 @@ export default function Project({
 
       {videoUrl ? (
         <button
+          ref={triggerRef}
           type="button"
           onClick={() => setIsPlaying(true)}
           aria-label={`Play ${title} demo`}
-          className='absolute hidden sm:block top-8 -right-28 w-[28.25rem] group-even:right-[initial] group-even:-left-28 focus:outline-none group/play'
+          className='absolute hidden sm:block top-8 -right-28 w-[28.25rem] group-even:right-[initial] group-even:-left-28 rounded-t-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 group/play'
         >
           <Image
             src={imageUrl}
@@ -199,7 +181,7 @@ export default function Project({
         }}
         className='group mb-3 sm:mb-8 last:mb-0'
       >
-        {liveLinks || codeUrl ? (
+        {codeUrl ? (
           card
         ) : (
           <a href={link} target='_blank' rel='noopener noreferrer'>
@@ -214,12 +196,16 @@ export default function Project({
           onClick={() => setIsPlaying(false)}
         >
           <div
+            role='dialog'
+            aria-modal='true'
+            aria-label={`${title} demo video`}
             className='relative w-full max-w-4xl mx-4'
             onClick={(e) => e.stopPropagation()}
           >
             <button
+              ref={closeRef}
               onClick={() => setIsPlaying(false)}
-              className='absolute -top-10 right-0 text-white/80 hover:text-white transition text-sm tracking-wide'
+              className='absolute -top-10 right-0 text-white/80 hover:text-white transition text-sm tracking-wide rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60'
               aria-label='Close video'
             >
               ✕ Close
