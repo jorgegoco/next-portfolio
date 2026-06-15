@@ -2,9 +2,9 @@ import React from "react"
 import { CgWorkAlt } from "react-icons/cg"
 import { FaReact } from "react-icons/fa"
 import { LuGraduationCap } from "react-icons/lu"
-import littleShopImg from "@/public/littleShop.png"
-import ticketImg from "@/public/ticket.png"
-import sellitImg from "@/public/sellit.png"
+import researchAgentImg from "@/public/projects/research-agent.png"
+import mcpChatbotImg from "@/public/projects/mcp-chatbot-client.png"
+import cookingCopilotImg from "@/public/projects/cooking-copilot.png"
 import adeParseImg from "@/public/projects/ade-parse.jpg"
 import adePipelineImg from "@/public/projects/ade-pipeline.jpg"
 import adeRagImg from "@/public/projects/ade-rag.jpg"
@@ -126,48 +126,30 @@ export const projectsData = [
     description:
       "A team of cooperating AI agents — planner → researcher → writer → editor — that autonomously produces full academic reports from arXiv and live web search, with real-time progress tracking.",
     tags: ["Python", "FastAPI", "LangChain", "PostgreSQL"],
-    imageUrl: ticketImg,
+    imageUrl: researchAgentImg,
     link: "https://github.com/jorgegoco/research-agentic-ai",
+    codeUrl: "https://github.com/jorgegoco/research-agentic-ai",
+    videoUrl: "/projects/research-agent.mp4",
   },
   {
     title: "MCP Chatbot Client",
     description:
       "A production Model Context Protocol client that connects to unlimited MCP servers at once and discovers their tools dynamically — solving the M×N integration problem with a clean M+N pattern.",
     tags: ["Python", "MCP", "Claude API"],
-    imageUrl: sellitImg,
+    imageUrl: mcpChatbotImg,
     link: "https://github.com/jorgegoco/mcp-chatbot-client",
-  },
-  {
-    title: "Job Offers Generator",
-    description:
-      "A web app that reads a job posting and generates a tailored CV and cover letter with Claude — automatic language detection and PDF export built in.",
-    tags: ["Python", "FastAPI", "Claude", "WeasyPrint"],
-    imageUrl: littleShopImg,
-    link: "https://github.com/jorgegoco/job_offers",
-  },
-  {
-    title: "UI Gen — Components from Natural Language",
-    description:
-      "Describe a UI in plain language and get a working React component back, with live preview, hot reload, and user accounts.",
-    tags: ["Next.js 15", "TypeScript", "Prisma", "Vercel AI SDK"],
-    imageUrl: ticketImg,
-    link: "https://github.com/jorgegoco/uigen",
-  },
-  {
-    title: "Audio Diary (Privacy-First)",
-    description:
-      "A voice journaling app that transcribes speech locally with Whisper — no audio ever leaves the device.",
-    tags: ["Next.js 15", "FastAPI", "Whisper"],
-    imageUrl: sellitImg,
-    link: "https://github.com/jorgegoco/audio-diary-app",
+    codeUrl: "https://github.com/jorgegoco/mcp-chatbot-client",
+    videoUrl: "/projects/mcp-chatbot-client.mp4",
   },
   {
     title: "Cooking Copilot — Voice Agent (in progress)",
     description:
       "A voice-driven cooking assistant — talk to the agent while you cook and it drives the on-screen recipe (advancing steps, highlighting ingredients, starting timers) while the UI feeds context back to the agent. A hands-on exploration of real-time, bidirectional voice agents.",
     tags: ["React 19", "TypeScript", "Vite", "Vocal Bridge SDK", "In progress"],
-    imageUrl: littleShopImg,
+    imageUrl: cookingCopilotImg,
     link: "https://github.com/jorgegoco/cooking_copilot",
+    codeUrl: "https://github.com/jorgegoco/cooking_copilot",
+    videoUrl: "/projects/cooking-copilot.mp4",
   },
 ] as const
 
