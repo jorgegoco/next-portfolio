@@ -122,6 +122,28 @@ export default function Project({
             Code ↗
           </a>
         )}
+
+        {videoUrl && (
+          <button
+            type='button'
+            onClick={() => setIsPlaying(true)}
+            aria-label={`Play ${title} demo`}
+            className='sm:hidden mt-4 relative w-full rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 group/play-mobile'
+          >
+            <Image
+              src={imageUrl}
+              alt={`${title} poster`}
+              quality={95}
+              className='rounded-lg shadow-lg w-full'
+            />
+            <div className='absolute inset-0 flex items-center justify-center'>
+              <div className='w-14 h-14 rounded-full bg-indigo-600/90 flex items-center justify-center
+                text-white text-2xl transition group-hover/play-mobile:bg-indigo-700 group-hover/play-mobile:scale-110'>
+                ▶
+              </div>
+            </div>
+          </button>
+        )}
       </div>
 
       {videoUrl ? (
