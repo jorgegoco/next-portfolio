@@ -69,9 +69,9 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.05 }}
       >
-        I build&nbsp;
-        <span className="font-bold">production AI systems</span> that do real
-        work —&nbsp;
+        I&nbsp;
+        <span className="font-bold">build and deploy</span> AI systems that do
+        real work —&nbsp;
         <span className="underline">agents</span>,&nbsp;
         <span className="underline">RAG pipelines</span>, and&nbsp;
         <span className="italic">document automation</span>.
@@ -83,7 +83,7 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
       >
-        Python · FastAPI · Next.js · Claude &amp; OpenAI · LangChain · MCP. I
+        Python · FastAPI · Next.js · Claude &amp; OpenAI · MCP · Docker. I
         take AI from prototype to a deployed, containerized service people
         actually use — backed by&nbsp;
         <span className="font-bold">15 years</span> of running real-world

@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Jorge González | AI Agent & Automation Developer',
   description:
-    'I design and ship production AI agents, RAG systems, and workflow automation in Python/FastAPI and Next.js — integrating Claude, OpenAI, LangChain, and MCP. Available for contract and full-time work.',
+    'I build and deploy AI agents, RAG pipelines and document-AI automation with Claude, OpenAI, FastAPI and the Model Context Protocol. Contract and full-time work.',
 }
 
 export default function RootLayout({
