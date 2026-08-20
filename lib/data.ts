@@ -50,7 +50,7 @@ export const experiencesData = [
     title: "Production Manager — MAI",
     location: "Ourense, Spain",
     description:
-      "Ran operations and a 20+ person team. Applied Six Sigma to optimize workflows and quality — the process discipline I now bring to automation work.",
+      "Ran operations and a 20+ person team. Defined what correct looked like for a process, measured when it drifted, and traced failures to root cause — the process discipline I now bring to automation work.",
     icon: React.createElement(CgWorkAlt),
     date: "2002 - 2017",
   },
@@ -66,7 +66,7 @@ export const experiencesData = [
     title: "AI & Automation Developer — Freelance",
     location: "Remote",
     description:
-      "Design, build, and deploy production AI systems: multi-agent workflows, RAG pipelines, MCP integrations, and document-extraction automation using Claude, OpenAI, LangChain, and FastAPI — shipped as containerized services on VPS infrastructure. 30+ certifications in ML, Deep Learning, NLP, and Computer Vision from Stanford, MIT, and DeepLearning.AI.",
+      "Design, build and deploy AI systems: multi-agent workflows, RAG pipelines, MCP integrations, and document-extraction automation using Claude, OpenAI, and FastAPI — shipped as containerized services on VPS infrastructure. 30+ certificates in AI, machine learning and mathematics from Stanford, MIT and DeepLearning.AI.",
     icon: React.createElement(FaReact),
     date: "2022 - Present",
   },
@@ -85,7 +85,7 @@ export const projectsData = [
     title: "ADE Parse — Document Parser & Extractor",
     description:
       "Vision-first parsing of any PDF or image into structured markdown, plus schema-based field extraction with visual grounding (handles handwriting, stamps, broken tables).",
-    tags: ["Python", "FastAPI", "Claude", "LandingAI ADE", "React"],
+    tags: ["JavaScript", "Vite", "LandingAI ADE"],
     imageUrl: adeParseImg,
     link: "https://github.com/jorgegoco/demo-ade-parse-front",
     codeUrl: "https://github.com/jorgegoco/demo-ade-parse-front",
@@ -125,7 +125,7 @@ export const projectsData = [
     title: "Research Agent (Multi-Agent System)",
     description:
       "A team of cooperating AI agents — planner → researcher → writer → editor — that autonomously produces full academic reports from arXiv and live web search, with real-time progress tracking.",
-    tags: ["Python", "FastAPI", "LangChain", "PostgreSQL"],
+    tags: ["Python", "FastAPI", "aisuite", "PostgreSQL"],
     imageUrl: researchAgentImg,
     link: "https://github.com/jorgegoco/research-agentic-ai",
     codeUrl: "https://github.com/jorgegoco/research-agentic-ai",
@@ -134,7 +134,7 @@ export const projectsData = [
   {
     title: "MCP Chatbot Client",
     description:
-      "A production Model Context Protocol client that connects to unlimited MCP servers at once and discovers their tools dynamically — solving the M×N integration problem with a clean M+N pattern.",
+      "A Model Context Protocol client (~250 lines) that connects to any number of MCP servers declared in config and discovers their tools dynamically — solving the M×N integration problem with a clean M+N pattern.",
     tags: ["Python", "MCP", "Claude API"],
     imageUrl: mcpChatbotImg,
     link: "https://github.com/jorgegoco/mcp-chatbot-client",
@@ -144,7 +144,7 @@ export const projectsData = [
   {
     title: "Cooking Copilot — Voice Agent",
     description:
-      "A voice-driven cooking assistant — talk to the agent while you cook and it drives the on-screen recipe (advancing steps, highlighting ingredients, starting timers) while the UI feeds context back to the agent. A real-time, bidirectional voice agent: speech in, tool calls and live UI updates out.",
+      "A voice-driven cooking assistant — talk to the agent while you cook and it drives the on-screen recipe (advancing steps, highlighting ingredients, starting timers) while the UI feeds context back to the agent. Built on the Vocal Bridge SDK — I built the application layer and the bidirectional client actions, not the speech pipeline.",
     tags: ["React 19", "TypeScript", "Vite", "Vocal Bridge SDK"],
     imageUrl: cookingCopilotImg,
     link: "https://github.com/jorgegoco/cooking_copilot",
@@ -158,38 +158,32 @@ export const skillsData = [
   "Anthropic Claude API",
   "OpenAI API",
   "AI Agent Development",
-  "Claude tool-use / agentic loops",
-  "LangChain",
-  "Model Context Protocol (MCP)",
+  "Agent orchestration & tool-calling loops",
+  "Model Context Protocol (client & server)",
   "RAG",
   "Vector Databases (ChromaDB)",
-  "OCR & Vision-Language Models",
-  "LandingAI ADE",
-  "Voice agents (real-time)",
+  "Document AI (LandingAI ADE)",
+  "Voice agent UI (Vocal Bridge SDK)",
   "Ollama (local inference)",
   "Prompt Engineering",
   // Backend & Deployment
   "Python",
   "FastAPI",
   "REST API design",
-  "Microservices",
+  "Async background jobs",
   "Docker",
   "VPS deployment (Contabo / Easypanel)",
-  "AWS (S3, Lambda)",
-  "CI/CD (GitHub Actions)",
+  "AWS S3 (application level)",
   "Linux",
+  // Reliability
+  "Timeouts, retries & exponential backoff",
+  "LLM output validation",
+  "Structured error handling",
   // Data
   "PostgreSQL",
-  "MongoDB",
-  "Redis",
   // Frontend
   "TypeScript",
   "React",
   "Next.js",
   "Tailwind CSS",
-  // ML foundations
-  "TensorFlow",
-  "PyTorch",
-  "NLP",
-  "Computer Vision",
 ] as const
