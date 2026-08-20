@@ -125,7 +125,7 @@ export const projectsData = [
     title: "Research Agent (Multi-Agent System)",
     description:
       "A team of cooperating AI agents — planner → researcher → writer → editor — that autonomously produces full academic reports from arXiv and live web search, with real-time progress tracking.",
-    tags: ["Python", "FastAPI", "aisuite", "PostgreSQL"],
+    tags: ["Python", "FastAPI", "aisuite", "PostgreSQL", "Docker"],
     imageUrl: researchAgentImg,
     link: "https://github.com/jorgegoco/research-agentic-ai",
     codeUrl: "https://github.com/jorgegoco/research-agentic-ai",

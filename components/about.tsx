@@ -39,9 +39,11 @@ export default function About() {
         <span className="font-medium">Claude and OpenAI</span>, RAG and vector
         databases, both sides of the&nbsp;
         <span className="font-medium">Model Context Protocol</span>, and document
-        extraction on LandingAI&apos;s ADE. I write my own agent orchestration
-        rather than leaning on a framework, and I set my own timeouts, retries
-        and validation rather than relying on library defaults. On the frontend
+        extraction on&nbsp;
+        <span className="font-medium">LandingAI&apos;s ADE</span>. I write&nbsp;
+        <span className="font-medium">my own agent orchestration</span> rather
+        than leaning on a framework, and I set my own timeouts, retries and
+        validation rather than relying on library defaults. On the frontend
         and full-stack side I work in&nbsp;
         <span className="font-medium">Next.js, React, Node.js, and Ruby on Rails</span>.
       </p>
